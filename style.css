@@ -58,7 +58,7 @@ nav {
     height: 2px;
     width: 0%;
      background: green;
-    transition: width 0.35s ease ease-in-out;
+    transition: width 0.35s ease-in-out;
 }
 .list .li:hover::after {
     width: 100%;
@@ -464,5 +464,6 @@ nav {
         backdrop-filter: blur(5px);
         border: 2px solid green;
     }
+
 
 }
