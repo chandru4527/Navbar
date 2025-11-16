@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-image: url(./images/summer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 30px;
+    color: green;
+}
+
+
+
+.list {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    gap: 30px;
+}
+
+.list .li {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        color: green;
+    }
+}
+
+.li::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+     background: green;
+    transition: width 0.35s ease ease-in-out;
+}
+.list .li:hover::after {
+    width: 100%;
+}
+
+
+.btn-group {
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn1 {
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    &:hover {
+        color: green;
+        background-color: white;
+        border: 2px solid green;
+    }
+}
+
+.btn2 {
+    height: 40px;
+    width: 50px;
+    font-size: 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    &:hover {
+        color: green;
+        background-color: white;
+        border: 2px solid green;
+    }
+}
+
+.btn2 span {
+    font-size: 20px;
+}
+
+.dropdown {
+    height: 210px;
+    width: 100%;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: green;
+    display: none;
+}
+
+.dropdown .dlist {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 210px;
+    width: 220px;
+    font-size: 18px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    border: 2px solid green;
+}
+
+.dropdown .dlist .dli {
+    height: 30px;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        color: #1ce01c;
+        border-bottom: 2px solid #1ce01c;
+    }
+}
+.dropdown.show{
+    display: flex;
+}
+
+
+
+/* media query */
+
+@media (max-width:499px) {
+
+    nav {
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .btn-group {
+        width: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .btn1 {
+        height: 30px;
+        width: 80px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: green;
+            background-color: white;
+            border: 2px solid green;
+        }
+    }
+
+    .btn2 {
+        height: 30px;
+        width: 40px;
+        font-size: 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: green;
+            background-color: white;
+            border: 2px solid green;
+        }
+    }
+
+    .btn2 span {
+        font-size: 15px;
+    }
+
+
+    .dropdown {
+        height: 210px;
+        width: 100%;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: green;
+        display: none;
+    }
+
+    .dropdown .dlist {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 210px;
+        width: 290px;
+        font-size: 18px;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+        border: 2px solid green;
+    }
+}
+
+@media (min-width:499px) and (max-width:799px) {
+    nav {
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .btn-group {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .btn1 {
+        height: 35px;
+        width: 80px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: green;
+            background-color: white;
+            border: 2px solid green;
+        }
+    }
+
+    .btn2 {
+        height: 35px;
+        width: 40px;
+        font-size: 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: green;
+            background-color: white;
+            border: 2px solid green;
+        }
+    }
+
+    .btn2 span {
+        font-size: 17px;
+    }
+
+
+    .dropdown {
+        height: 210px;
+        width: 100%;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        color: green;
+        display: none;
+    }
+
+    .dropdown .dlist {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 210px;
+        width: 250px;
+        font-size: 18px;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+        border: 2px solid green;
+    }
+}
+
+@media (min-width:799px) and (max-width:1050px) {
+    nav {
+        height: 90px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .btn-group {
+        width: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .btn1 {
+        height: 40px;
+        width: 100px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: green;
+            background-color: white;
+            border: 2px solid green;
+        }
+    }
+
+    .btn2 {
+        height: 40px;
+        width: 50px;
+        font-size: 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            color: green;
+            background-color: white;
+            border: 2px solid green;
+        }
+    }
+
+    .btn2 span {
+        font-size: 20px;
+    }
+
+
+    .dropdown {
+        height: 210px;
+        width: 100%;
+        padding: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        color: green;
+        display: none;
+    }
+
+    .dropdown .dlist {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 210px;
+        width: 250px;
+        font-size: 18px;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+        border: 2px solid green;
+    }
+
+}

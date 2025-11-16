@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="icon" href="./images/Logo-img.png" type="img">
+    <link rel="stylesheet" href="./style.css">
+    <title>Responsive navbar</title>
+</head>
+
+<body>
+    <nav>
+        <h1 class="logo">Web Dev Creative</h1>
+
+        <ul class="list">
+            <li class="li">Home</li>
+            <li class="li">About</li>
+            <li class="li">Services</li>
+            <li class="li">Contact</li>
+        </ul>
+
+        <div class="btn-group">
+            <button class="btn1">
+                Get Start
+            </button>
+            <button class="btn2">
+                <span>
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="dropdown">
+        <ul class="dlist">
+            <li class="dli">Home</li>
+            <li class="dli">About</li>
+            <li class="dli">Services</li>
+            <li class="dli">Contact</li>
+        </ul>
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector(".btn2");
+        const icon = toggleBtn.querySelector("i");
+        const box = document.querySelector(".dropdown");
+
+        toggleBtn.addEventListener("click", () => {
+            box.classList.toggle("show");
+
+            if (box.classList.contains("show")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");  // change to close
+            } else {
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");   // change to bar
+            }
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
